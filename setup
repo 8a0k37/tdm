@@ -1,8 +1,12 @@
 #!/bin/bash
 
 
-sthhsh=$(sed -n '499p' ...)
+sthhsh=$(sed -n '100p' ...)
 
 read -p "" hsh133
 
 if [[ "$hsh133" == "sthhsh" ]]
+  ./....
+fi
+
+exit 0
