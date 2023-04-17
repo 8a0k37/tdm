@@ -1,0 +1,8 @@
+#!/bin/bash
+
+
+sthhsh=$(sed -n '499p' ...)
+
+read -p "" hsh133
+
+if [[ "$hsh133" == "sthhsh" ]]
