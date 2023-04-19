@@ -1,0 +1,43 @@
+#!/bin/bash
+
+
+if [[ $EUID -ne 0 ]]; then
+  exit 0
+fi
+
+#CONFIG
+username="tomasdada"
+password="dpass"
+#CONFIG END
+
+read -p "" input_username
+read -p "" -s input_password
+
+if [[ "$input_username" != "$username" ]] || [[ "$input_password" != "$password" ]]; then
+  exit 0
+fi
+
+read -p "" option
+
+if [[ "$option" == "1" ]]; then
+  read -p "" user
+  if [[ "$user" == "root" ]]; then
+    read -p "" yorn
+    if [[ "$yorn" != "Y" ]] && [[ "$yorn" != "y" ]]; then
+      exit 1
+    fi
+  fi
+  pkill -u ${user} > /dev/null 2>&1
+elif [[ "$option" == "2" ]]; then
+  read -p "" message
+  read -p "" sendornot
+  if [[ "$sendornot" == "send" ]]; then
+    wall -n "$message"
+  fi
+elif [[ "$option" == "3" ]]; then
+
+elif [[ "$option" == "4" ]]; then
+
+elif [[ "$option" == "5" ]]; then
+
+elif [[ "$option" == "6" ]]; then
