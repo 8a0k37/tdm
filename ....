@@ -1,6 +1,0 @@
-#!/bin/bash
-
-
-echo "yes"
-
-exit 1
